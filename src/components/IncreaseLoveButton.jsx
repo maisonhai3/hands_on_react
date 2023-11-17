@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "@picocss/pico/css/pico.min.css";
 
 export default () => {
   const [count, setCount] = useState(0);

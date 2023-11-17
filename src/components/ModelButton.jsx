@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import "@picocss/pico/css/pico.min.css";
+
 
 function ModelButton() {
   const [showModal, setShowModal] = useState(false);
