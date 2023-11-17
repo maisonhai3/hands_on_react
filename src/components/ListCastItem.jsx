@@ -5,7 +5,7 @@ export default () => {
 
   async function fetchCastImages() {
     try {
-      const response = await fetch("public/cast.json");
+      const response = await fetch("cast.json");
       const castData = await response.json();
       setCastImages(castData);
     } catch (error) {
@@ -28,7 +28,7 @@ export default () => {
     >
       {castImages.map((item) => (
         <img
-          src={`public/images/${item.slug}_tn.svg`}
+          src={`images/${item.slug}_tn.svg`}
           // alt={item.name}
           // style={{ width: "100%", height: "auto" }}
         />
