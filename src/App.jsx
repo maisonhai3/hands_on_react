@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import IncreaseLoveButton from "./components/IncreaseLoveButton";
 
 function useTopicImage(imageUrl) {

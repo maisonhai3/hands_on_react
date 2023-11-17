@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default () => {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    count && (document.title = `I adore you this much: ${count} hearts!`);
+  });
 
   return (
     <div style={{ display: "flex", justifyContent: "center" }}>
@@ -23,7 +27,8 @@ export default () => {
             color: "indigo",
           }}
         >
-          Click here to increase my love for you! <br></br><br></br>
+          Click here to increase my love for you! <br></br>
+          <br></br>
           Now, it is {count} hearts!
         </span>
       </button>
