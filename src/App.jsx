@@ -1,4 +1,5 @@
 import React from "react";
+import IncreaseLoveButton from "./components/IncreaseLoveButton";
 
 function useTopicImage(imageUrl) {
   const [imageWidth, setImageWidth] = React.useState(0);
@@ -33,51 +34,34 @@ function App() {
   const topicImage = useTopicImage(imageUrl);
 
   return (
-    <div className="container">
-      <article>
-        {topicImage}
-        
-        <h1>
-          Hello, <i style={{ color: "Red" }}> {name}</i>{" "}
-        </h1>
-        <h1>
-          I
-          <span
-            style={{
-              fontWeight: "bold",
-              fontStyle: "italic",
-              fontSize: "2em",
-              color: "pink",
-            }}
-          >
-            {" "}
-            adore{" "}
-          </span>
-          you
-        </h1>
-        <p style={{ fontStyle: "italic", color: "purple" }}>
-          She is nice, sweet, and original. <br></br>
-          She lights up my world!
-        </p>
+    <article>
+      {topicImage}
 
-        <button
-          className="outline"
+      <h1>
+        Hello, <i style={{ color: "Red" }}> {name}</i>{" "}
+      </h1>
+      <h1>
+        I
+        <span
           style={{
-            backgroundColor: "pink",
-            border: "2px solid hotpink",
-            display: "flex",
-            justifyContent: "center",
-            color: "white",
             fontWeight: "bold",
+            fontStyle: "italic",
+            fontSize: "2em",
+            color: "pink",
           }}
-          onClick={() => alert("Your smiles are sunshine")}
         >
-          Click here for a surprise!
-        </button>
-      </article>
-    </div>
+          {" "}
+          adore{" "}
+        </span>
+        you
+      </h1>
+      <p style={{ fontStyle: "italic", color: "purple" }}>
+        You are nice, sweet, and original. <br></br>
+        You light up my world!
+      </p>
+      <IncreaseLoveButton />
+    </article>
   );
 }
 
 export default App;
-
