@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import IncreaseLoveButton from "./components/IncreaseLoveButton";
+import ListCastItem from "./components/ListCastItem";
 
 function useTopicImage(imageUrl) {
   const [imageWidth, setImageWidth] = React.useState(0);
@@ -60,6 +61,7 @@ function App() {
         You light up my world!
       </p>
       <IncreaseLoveButton />
+      <ListCastItem />
     </article>
   );
 }
